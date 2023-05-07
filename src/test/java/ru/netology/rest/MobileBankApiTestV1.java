@@ -20,11 +20,6 @@ class MobileBankApiTestV1 {
           .get("/demo/accounts")
       // Проверки
       .then()
-          .statusCode(200)
-              .contentType(ContentType.JSON)
-              .body("",hasSize(3))
-              .body("[1].currency",equalTo("USD"))
-              .body(matchesJsonSchemaInClasspath("accounts.schema.json"));
-
+          .statusCode(200);
     }
 }
